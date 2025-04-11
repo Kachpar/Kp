@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attendance Sheet</title>
+    <script>
+      function submitForm() {
+        var absentStudents = [];
+        var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+        checkboxes.forEach(function(checkbox) {
+          absentStudents.push(checkbox.value);
+        });
+        if (absentStudents.length > 0) {
+          alert('Absent Students Roll Numbers: ' + absentStudents.join(', '));
+        } else {
+          alert('No students marked as absent.');
+        }
+      }
+    </script>
+    <style>
+        table {
+            width: 100%;   /* Table ko puri width me set karega */
+            height: 100vh;  /* Table ko viewport ki full height me set karega */
+            border-collapse: collapse; /* Table ki borders ko merge karega */
+        }
+        th, td {
+            border: 1px solid black; /* Cell ki border define karega */
+            padding: 10px;            /* Cell ke andar space */
+            text-align: center;       /* Text ko center me align karega */
+        }
+    </style>
+  </head>
+  <body>
+    <form onsubmit="event.preventDefault(); submitForm();">
+      <table border="1">
+        <tr>
+          <td>ROLL NUMBER</td>
+          <td><center>STUDENT NAME</center></td>
+          <td>Absent</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>GOHIL JAYESHKUMAR VANABHAI</td>
+          <td><input type="checkbox" name="Absent" value="1"></td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>PITHVA JAHANVIBEN PARESHBHAI</td>
+          <td><input type="checkbox" name="Absent" value="2"></td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>PARMAR DHARMIK GHANSHYAMBHAI</td>
+          <td><input type="checkbox" name="Absent" value="3"></td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>MAKDA RABAB SAIFUDINBHA</td>
+          <td><input type="checkbox" name="Absent" value="4"></td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>SOLANKI RANJANBEN RAJUBHAI</td>
+          <td><input type="checkbox" name="Absent" value="5"></td>
+        </tr>
+        <tr>
+          <td>6</td>
+          <td>SHIYAL SOHAM NITINBHAI</td>
+          <td><input type="checkbox" name="Absent" value="6"></td>
+        </tr>
+        <tr>
+          <td>7</td>
+          <td>NAKUM JAGRUTI BHUPATBHAI</td>
+          <td><input type="checkbox" name="Absent" value="7"></td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>CHOTALIYA FORAM SUBHASHBHAI</td>
+          <td><input type="checkbox" name="Absent" value="8"></td>
+        </tr>
+        <tr>
+          <td>9</td>
+          <td>BALDANIYA MUKUND BHAVANBHAI</td>
+          <td><input type="checkbox" name="Absent" value="9"></td>
+        </tr>
+        <tr>
+          <td>10</td>
+          <td>HARIYANI DRASHTIBEN KANAIYALAL</td>
+          <td><input type="checkbox" name="Absent" value="10"></td>
+        </tr>
+        <tr>
+          <td>11</td>
+          <td>YADAV JANVI RAJUBHAI</td>
+          <td><input type="checkbox" name="Absent" value="11"></td>
+        </tr>
+        <tr>
+          <td>12</td>
+          <td>BAMBHANIYA JAGRUTI BIJALBHAI</td>
+          <td><input type="checkbox" name="Absent" value="12"></td>
+        </tr>
+        <tr>
+          <td>13</td>
+          <td>DHAPA PARESHBHAI RANABHAI</td>
+          <td><input type="checkbox" name="Absent" value="13"></td>
+        </tr>
+        <tr>
+          <td>14</td>
+          <td>TUKADIYA YASH KANJIBHAI</td>
+          <td><input type="checkbox" name="Absent" value="14"></td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>DEVGANIYA TEJASVIBEN JITUBHAI</td>
+          <td><input type="checkbox" name="Absent" value="15"></td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>VALA HEMANSHI KISHANBHAI</td>
+          <td><input type="checkbox" name="Absent" value="16"></td>
+        </tr>
+        <tr>
+          <td>17</td>
+          <td>CHAUHAN SUHANI NITINBHAI</td>
+          <td><input type="checkbox" name="Absent" value="17"></td>
+        </tr>
+        <tr>
+          <td>18</td>
+          <td>SHARMA BHUMIKA LILADHAR</td>
+          <td><input type="checkbox" name="Absent" value="18"></td>
+        </tr>
+        <tr>
+          <td>19</td>
+          <td>DODIYA AJAYBHAI NARSHIBHAI</td>
+          <td><input type="checkbox" name="Absent" value="19"></td>
+        </tr>
+        <tr>
+          <td>20</td>
+          <td>BARAIYA GAYTRI LALJIBHAI</td>
+          <td><input type="checkbox" name="Absent" value="20"></td>
+        </tr>
+        <tr>
+          <td>21</td>
+          <td>SUMA ADIL JAVEDBHAI</td>
+          <td><input type="checkbox" name="Absent" value="21"></td>
+        </tr>
+        <tr>
+          <td>22</td>
+          <td>GOHIL RUSHIT LAKHABHAI</td>
+          <td><input type="checkbox" name="Absent" value="22"></td>
+        </tr>
+        <tr>
+          <td>23</td>
+          <td>DHAPA DHARMESHBHAI KISHORBHAI</td>
+          <td><input type="checkbox" name="Absent" value="23"></td>
+        </tr>
+        <tr>
+          <td>24</td>
+          <td>JANI GARGI AJAYKUMAR</td>
+          <td><input type="checkbox" name="Absent" value="24"></td>
+        </tr>
+        <tr>
+          <td>25</td>
+          <td>&nbsp;DEVGANIYA NIRBHAY JITUBHAI&nbsp;</td>
+          <td><input type="checkbox" name="Absent" value="25"></td>
+        </tr>
+        <tr>
+          <td>26</td>
+          <td>SHIYAL UTTAM LALJIBHAI</td>
+          <td><input type="checkbox" name="Absent" value="26"></td>
+          
+        </tr>
+            <tr>
+      <td>27</td>
+      <td>KAVAD DEVANSHIBEN ASHOKBHAI</td>
+      <td><input type="checkbox" name="Absent" value="27"></td>
+
+    </tr>  
+    <tr>
+      <td>28</td>
+      <td>VALA SAGAR ASHOKBHAI</td>
+      <td><input type="checkbox" name="Absent" value="28"></td>
+
+    </tr>
+     
+          <tr>
+      <td>29</td>
+      <td>VALA SHAKTISINH DEVENDRASINH</td>
+      <td><input type="checkbox" name="Absent" value="29"></td>
+
+    </tr>
+        <tr>
+      <td>30</td>
+      <td>BADAMI AFIFA KAMBERALI</td>
+      <td><input type="checkbox" name="Absent" value="30"></td>
+
+    </tr>
+        <tr>
+      <td>31</td>
+      <td>SARVAIYA DHRUVI SURESHBHAI</td>
+      <td><input type="checkbox" name="Absent" value="31"></td>
+
+    </tr>
+        <tr>
+      <td>32</td>
+      <td>JOSHI PARTH KAMLESHBHAI</td>
+      <td><input type="checkbox" name="Absent" value="32"></td>
+
+    </tr>
+        <tr>
+      <td>33</td>
+      <td>VANIYA PRINS RAMESHBHAI</td>
+      <td><input type="checkbox" name="Absent" value="33"></td>
+
+    </tr>
+        <tr>
+      <td>34</td>
+      <td>UNAGAR RUCHITA CHETANBHAI</td>
+      <td><input type="checkbox" name="Absent" value="34"></td>
+
+    </tr>
+        <tr>
+      <td>35</td>
+      <td>PARMAR PRIYANKA HIMMATBHAI</td>
+      <td><input type="checkbox" name="Absent" value="35"></td>
+
+    </tr>
+        <tr>
+      <td>36</td>
+      <td>SHAH MAULI HITESHBHAI</td>
+      <td><input type="checkbox" name="Absent" value="36"></td>
+
+    </tr>
+        <tr>
+      <td>37</td>
+      <td>VAGHELA VAIBHAVBHAI BHUPATBHAI</td>
+      <td><input type="checkbox" name="Absent" value="37"></td>
+
+    </tr>
+        <tr>
+      <td>38</td>
+      <td>HADIYA HETALBEN NATHABHA</td>
+      <td><input type="checkbox" name="Absent" value="38"></td>
+
+    </tr>
+        <tr>
+      <td>39</td>
+      <td>VASANI HANI AMITBHAI</td>
+      <td><input type="checkbox" name="Absent" value="39"></td>
+
+    </tr>
+        <tr>
+      <td>40</td>
+      <td>DEGADA TISHA RAJULBHAI</td>
+      <td><input type="checkbox" name="Absent" value="40"></td>
+
+    </tr>
+        <tr>
+      <td>41</td>
+      <td>PARMAR DHARMIK CHANDRAKANTBHAI</td>
+      <td><input type="checkbox" name="Absent" value="41"></td>
+
+    </tr>
+        <tr>
+      <td>42</td>
+      <td>BARAIYA PIYUSHBHAI DAMJIBHAI</td>
+      <td><input type="checkbox" name="Absent" value="42"></td>
+
+    </tr>
+        <tr>
+      <td>43</td>
+      <td>PARMAR KHUSHIBEN HIRABHAI</td>
+      <td><input type="checkbox" name="Absent" value="43"></td>
+      <tr>
+      <td>44</td>
+      <td>RATHOD KEVAL NAGJIBHAI</td>
+      <td><input type="checkbox" name="Absent" value="44"></td>
+    </tr>
+        <tr>
+      <td>45</td>
+      <td>KALSARA SANKET ANILBHAI</td>
+      <td><input type="checkbox" name="Absent" value="45"></td>
+    </tr>
+        <tr>
+      <td>46</td>
+      <td>VAGHELA JALPA HASMUKHBHAI</td>
+      <td><input type="checkbox" name="Absent" value="46"></td>
+    </tr>
+        <tr>
+      <td>47</td>
+      <td>SHIYAL SANJAY MAGANBHAI</td>
+      <td><input type="checkbox" name="Absent" value="47"></td>
+    </tr>
+        <tr>
+      <td>48</td>
+      <td>BHIL CHIRAGKUMAR SOMESHBHAI</td>
+      <td><input type="checkbox" name="Absent" value="48"></td>
+    </tr>
+        <tr>
+      <td>49</td>
+      <td>ZINZALA PRANAV LALABHAI</td>
+      <td><input type="checkbox" name="Absent" value="49"></td>
+    </tr>
+        <tr>
+      <td>50</td>
+      <td>KATARIYA RIDDHISHKUMAR SHANTIBHAI</td>
+      <td><input type="checkbox" name="Absent" value="50"></td>
+    </tr>
+        <tr>
+      <td>51</td>
+      <td>KATARIYA RIDDHISHKUMAR SHANTIBHAI</td>
+      <td><input type="checkbox" name="Absent" value="51"></td>
+    </tr>
+        <tr>
+      <td>52</td>
+      <td>CHAUHAN JAYDIPBHAI BHUPATBHAI</td>
+      <td><input type="checkbox" name="Absent" value="52"></td>
+    </tr>
+      <tr>
+      <td>53</td>
+      <td>RATHOD DIVYESH JAYSUKHBHAI</td>
+      <td><input type="checkbox" name="Absent" value="53"></td>
+    </tr>
+     <tr>
+      <td>54</td>
+      <td>SANDIS HIRALBEN BHARATBHAI</td>
+      <td><input type="checkbox" name="Absent" value="54"></td>
+    </tr>
+     <tr>
+      <td>55</td>
+      <td>BARAIYA SNEHABEN RAMESHBHAI</td>
+      <td><input type="checkbox" name="Absent" value="55"></td>
+    </tr>
+     <tr>
+      <td>56</td>
+      <td>GAJJAR DHARMI RAJESHBHAI</td>
+      <td><input type="checkbox" name="Absent" value="56"></td>
+ <tr>
+   <td>57</td>
+   <td>SHIYAL BHUMIBEN RAJUBHAI</td>
+   <td><input type="checkbox" name="Absent" value="57"></td>
+    </tr>
+     <tr>
+      <td>58</td>
+      <td>JOLIYA DHARMIK RASIKBHAI</td>
+      <td><input type="checkbox" name="Absent" value="58"></td>
+    </tr>
+     <tr>
+      <td>59</td>
+      <td>PARMAR RUSHITABEN DIPAKBHAI</td>
+      <td><input type="checkbox" name="Absent" value="59"></td>
+    </tr>
+     <tr>
+      <td>60</td>
+      <td>GONDLIYA KRUPA SHIVRAMBHAI</td>
+      <td><input type="checkbox" name="Absent" value="60"></td>
+
+    </tr>
+    </table>
+    <br>
+ <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
